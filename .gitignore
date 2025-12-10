@@ -1,1 +1,13 @@
-CS271_final_data
+# Data files
+CS271_final_data/
+
+# Python virtual environments
+.venv/
+.conda/
+
+# Compiled files
+*.zip
+*.pyc
+
+# Cache directories
+__pycache__/
