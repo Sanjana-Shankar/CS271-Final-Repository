@@ -189,15 +189,15 @@ def main():
     # Load and preprocess the dataset
     data_path = Path("./CS271_final_data")
     if not os.path.exists("CS271_final_data/cnn_d.npz"):
-        print("cnn_c.npz not found, loading data and creating it...")
+        print("cnn_d.npz not found, loading data and creating it...")
         data_d, labels_d = load_data(data_path)
-        print("Saved cnn_c.npz")
+        print("Saved cnn_d.npz")
     else:
-        print("Found cnn_c.npz. Loading file...")
+        print("Found cnn_d.npz. Loading file...")
         data = np.load("CS271_final_data/cnn_d.npz", allow_pickle=True)
         data_d = data['data_d']
         labels_d = data['labels_d']
-        print("Loaded cnn_c.npz")
+        print("Loaded cnn_d.npz")
     
     model_d, history_d, X_test, y_test = cnn_model(data_d, labels_d)
     evaluation(model_d, history_d, X_test, y_test)
